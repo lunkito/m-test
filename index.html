@@ -1,109 +1,125 @@
-.portfolio {
-    /* Centra tambien las img si son inline-block. Mas alante cambian a block */
-    text-align: center;
-    background: var(--light-grey);
-    padding: 5em 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Portfolio Kevin Powell</title>
+   <link rel="stylesheet" href="css/all.css">
+</head> 
+<body>
+	
+	<div class="welcome">
+		<h1>Welcome to my<span>Portfolio</span></h1>
+	</div>
+	
+	<section class="intro">
+		<div class="intro-left">
+			<img src="img/welcome-01.png" alt="Laptop">
+		</div>
+		<div class="intro-middle">
+			<h2>Making it happen</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita repellendus, natus quas, alias sint consectetur, odio autem esse possimus accusantium tenetur at. Possimus consequatur repudiandae porro veritatis itaque, praesentium autem.</p>
+		</div>
+		<div class="intro-right">
+			<img src="img/welcome-02.png" alt="Computer, laptop">
+		</div>
+	</section>
+	
+	<section class="about container clearfix">
+		<img class="about-img" src="img/joe-portfolio.png" alt="Joe picture">
+		<h1 class="about-title">Joe Portfolio</h1>
+		<h2 class="about-subtitle">Designer & Developer</h2>
+		<div class="about-text">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quod nemo, eos quaerat vel obcaecati, sunt impedit non, voluptatum beatae sit delectus atque iusto soluta sapiente perferendis vitae deleniti corporis.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quod nemo, eos quaerat vel obcaecati, sunt impedit non, voluptatum beatae sit delectus atque iusto soluta sapiente perferendis vitae deleniti corporis.</p>
+		</div>                              
+	</section>
+	
+	<section class="portfolio">
+		<h1>My Work</h1>
+		<div class="portfolio-items container">
+			
+			<!-- Portfolio item 1 -->
+			<figure class="portfolio-item">
+				<img src="img/portfolio-01.jpg" alt="portfolio-item">
+				<figcaption>
+					<h2 class="portfolio-title">Project Name</h2>
+					<p class="portfolio-desc">A short description in here</p>
+					<a href="#" class="portfolio-link">Read more</a>
+				</figcaption>
+			</figure>
 
-/* Flex si no hay Grid */
-.portfolio-items {
-    display: flex;
-    flex-wrap: wrap;
-}
+			<!-- Portfolio item 2 -->
+			<figure class="portfolio-item">
+				<img src="img/portfolio-02.jpg" alt="portfolio-item">
+				<figcaption>
+					<h2 class="portfolio-title">Project Name</h2>
+					<p class="portfolio-desc">A short description in here</p>
+					<a href="#" class="portfolio-link">Read more</a>
+				</figcaption>
+			</figure>
 
-/* Relative => animacion del figcaption hijo con absolute */
-.portfolio-item {
-    position: relative;
-    overflow: hidden;
+			<!-- Portfolio item 3 -->
+			<figure class="portfolio-item featured">
+				<img src="img/portfolio-03.jpg" alt="portfolio-item">
+				<figcaption>
+					<h2 class="portfolio-title">Project Name</h2>
+					<p class="portfolio-desc">A short description in here</p>
+					<a href="#" class="portfolio-link">Read more</a>
+				</figcaption>
+			</figure>
 
-    /* Flex grow, shrink, min-size */
-    flex: 1 1 12rem;
-}
+			<!-- Portfolio item 4 -->
+			<figure class="portfolio-item">
+				<img src="img/portfolio-04.jpg" alt="portfolio-item">
+				<figcaption>
+					<h2 class="portfolio-title">Project Name</h2>
+					<p class="portfolio-desc">A short description in here</p>
+					<a href="#" class="portfolio-link">Read more</a>
+				</figcaption>
+			</figure>
 
-/* Texto que aparece en las img */
-.portfolio-item figcaption {
-    position: absolute;
-    /* Este top lo mueve hacia ¿abajo? ¿y lo tapa la siguiente img? */
-    top: 100%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 1.5rem;
-    background: rgba(03, 175, 194, .6);
-    color: var(--white);
-    text-align: left;
+			<!-- Portfolio item 5 -->
+			<figure class="portfolio-item">
+				<img src="img/portfolio-05.jpg" alt="portfolio-item">
+				<figcaption>
+					<h2 class="portfolio-title">Project Name</h2>
+					<p class="portfolio-desc">A short description in here</p>
+					<a href="#" class="portfolio-link">Read more</a>
+				</figcaption>
+			</figure>
+		</div>
+	</section>
 
-    /* Ojo a .portfolio-title con el flex */
-    display: flex;
-    flex-direction: column;
+	<section class="contact container">
+		<h1>Contact me</h1>
+		<form action="">
+			<label for="name" class="name">Name:
+				<input type="text" id="name">
+			</label>
+			
+			<label for="email" class="email">Email:
+				<input type="email" id="email">
+			</label>
+			
+			<label for="message" class="message">Message:
+				<textarea name="" id="message"></textarea>
+			</label>
 
-    transition:  top ease-in-out .25s;
-}
+			<input class="button" type="submit" value="Send">
+		</form>
+	</section>
 
-/* Transición */
-.portfolio-item:hover figcaption,
-.portfolio-item:focus figcaption {
-    top: 0;
-}
+	<footer>
+		<p>Follow me on social media</p>
+		<div class="social-icons container">
+			<img src="img/twitter.svg" alt="twitter" class="social-icon">
+			<img src="img/instagram.svg" alt="instagram" class="social-icon">
+			<img src="img/github.svg" alt="github" class="social-icon">
+		</div>
+		<p class="copyright">Copyright 2017 Joe Portfolio</p>
+	</footer>
 
-/* Eliminar espacio entre imagenes del display inline-block */
-/* Pero elimina el centrado de la img porque text-align no le afecta al block */
-.portfolio-item img {
-    display: block;
-    width: 100%;
-}
-
-.portfolio-title {
-    color: var(--white);
-    font-size: 2.5rem;
-    /* Este es el primer texto de los 3 */
-    /* Con margin bottom empujamos a los otros dos hacia abajo*/
-    margin-bottom: auto;
-}
-
-
-/* Se quita la descripción excepto a los featured */
-.portfolio-desc { display: none; }
-.portfolio-item.featured .portfolio-desc { display: block; }
-
-
-.portfolio-link {
-    color: var(--white);
-    font-weight: var(--fw-b);
-    font-size: 1rem;
-    text-decoration: none;
-    border-bottom: 3px solid var(--white);
-    /* Los hijos flex ocupan el 100% del ancho y esto arregla el border-bottom para que no llegue al 100% */
-    align-self: flex-start;
-}
-
-/* Flecha de los links */
-.portfolio-link::after {
-    content: url(../img/arrow-white.svg);
-    height: .8em;
-    width: .8em;
-    margin-left: .5em;
-    display: inline-block;
-}
-
-/* GRID */
-@supports (display: grid) {
-     /* 2 columnas iguales  */
-    .portfolio-items {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-     /* El resaltado ocupa 2 columnas empezando por la primera (1 / span 2) 
-     Idem para filas 
-     Aunque sea el ultimo figure se moverá al principio  */
-    .portfolio-item.featured {
-        grid-column: 1 / span 2;
-        grid-row: 1 / span 2;
-    }
-
-    .portfolio-item.featured .portfolio-title {
-        font-size: 5rem;
-    }
-}  
-
+</body>
+</html>
