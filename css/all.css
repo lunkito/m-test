@@ -1,9 +1,10 @@
 @import 'normalize.css';
-@import 'colors.css';
 @import 'typography.css';
+@import 'colors.css';
+
+@import 'base.css';
 @import 'welcome.css';
 @import 'intro.css';
-@import 'base.css';
 @import 'about.css';
 @import 'portfolio.css';
 
