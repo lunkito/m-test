@@ -29,7 +29,7 @@ nav {
 .container-all { 
    transition: transform ease-out .3s 
 }
-body.nav-open { overflow-x: hidden }
+body.nav-open { overflow: hidden }
 
 /* Nav Icons */
 .close-icon { display: none; }
