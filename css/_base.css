@@ -1,0 +1,44 @@
+body{
+   color: var(--grey);
+   font-family: 'Merriweather';
+   line-height: 1.6;
+   background: var(--white);
+   font-size: .875rem;
+}
+
+img {
+   max-width: 100%;
+}
+
+h1, h2, p {
+   margin-top: 0;
+   margin-bottom: 1em;
+}
+
+h1{
+   color: var(--blue);
+   line-height: 1;
+   font-size: 3.125rem;
+}
+
+h2{
+   font-size: 3rem;
+   font-family: 'Six Caps';
+   font-weight: var(--fw-n);
+   letter-spacing: var(--letter-spacing);
+   color: var(--dark-grey);
+   line-height: 1;
+}
+
+/* Para la parte de _about, portfolio y social-icons */
+.container {
+   width: 90%;
+   margin: 0 auto;
+   max-width: 50em;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
