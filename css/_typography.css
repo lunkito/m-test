@@ -1,9 +1,0 @@
-/* Aqui no funga poner los imports de google fonts */
-
-/*Font-weight*/
-:root{
-   --fw-n: 400;
-   --fw-b: 900;
-
-   --letter-spacing: .15em;
-}
